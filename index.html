@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14060c">
+<title>Gf Day ❤️ My Girl</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Pinyon+Script&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="glow g1"></div><div class="glow g2"></div>
+
+<!-- ===== OPENING SCREEN ===== -->
+<section id="intro">
+  <i class="bar t"></i><i class="bar b"></i>
+  <p class="date">Gf Day ❤️</p>
+  <h1 class="script">For My Girl…</h1>
+  <button id="openBtn" class="open-btn">Open <span class="beat">❤</span></button>
+</section>
+
+<!-- ===== MUSIC PLAYER (edit title/artist in script.js CONFIG) ===== -->
+<div id="player" class="glass" hidden>
+  <div class="art"><img id="cover" src="assets/cover.jpg" alt="" onerror="this.remove()"><span>♥</span></div>
+  <div class="meta"><b id="songTitle"></b><small id="songArtist"></small></div>
+  <div class="viz" id="viz"><i></i><i></i><i></i><i></i><i></i></div>
+  <button id="musicBtn" aria-label="Play or pause music">▶</button>
+  <audio id="audio" src="assets/music.mp3" preload="none" loop></audio>
+</div>
+
+<main id="main" hidden>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="date">Gf Day</p>
+    <h2 class="script big">My Girl</h2>
+    <p class="sub">A little movie, made just for you.</p>
+    <p class="note">(yes, I made this myself)</p>
+    <div class="heartwrap"><i></i><span class="beat heart-big">❤</span></div>
+    <a class="scroll" href="#video" aria-label="Scroll down">⌄</a>
+  </section>
+
+  <!-- VIDEO: replace assets/video.mp4 (and optional assets/poster.jpg) -->
+  <section id="video" class="sec reveal">
+    <div class="video-wrap glass">
+      <video id="vid" src="assets/video.mp4" poster="assets/poster.jpg" playsinline preload="metadata"></video>
+      <div class="vctrl">
+        <div class="vbar" id="vBar"><i id="vProg"></i></div>
+        <button id="vPlay" aria-label="Play or pause video">▶</button>
+        <button id="vFull" aria-label="Fullscreen">⛶</button>
+      </div>
+    </div>
+    <p class="caption script">A little video for my girl ❤️</p>
+  </section>
+
+  <!-- PHOTOS: replace assets/photo1-4.jpg, edit captions here, copy a <figure> to add more -->
+  <section class="sec reveal">
+    <h3 class="title script">Our Little Memories</h3>
+    <div class="gallery">
+      <figure><img src="assets/photo1.jpg" alt="" loading="lazy" onerror="this.classList.add('missing')"><figcaption>My favorite person ❤️</figcaption></figure>
+      <figure><img src="assets/photo2.jpg" alt="" loading="lazy" onerror="this.classList.add('missing')"><figcaption>You make everything better.</figcaption></figure>
+      <figure><img src="assets/photo3.jpg" alt="" loading="lazy" onerror="this.classList.add('missing')"><figcaption>My beautiful girl.</figcaption></figure>
+      <figure><img src="assets/photo4.jpg" alt="" loading="lazy" onerror="this.classList.add('missing')"><figcaption>Forever my favorite.</figcaption></figure>
+    </div>
+    <div class="dots" id="dots"></div>
+    <p class="hint">swipe →</p>
+  </section>
+
+  <!-- LOVE LETTER: edit the text below (blank line = new paragraph) -->
+  <section class="sec reveal">
+    <h3 class="title script">A Letter For You</h3>
+    <button id="envelope" class="envelope" aria-label="Open the letter">
+      <span class="flap"></span><span class="seal beat">🌸</span>
+    </button>
+    <p class="hint" id="envHint">tap to open</p>
+    <article id="letter" class="letter glass" hidden>
+      <p id="letterText" aria-live="polite"></p>
+    </article>
+    <template id="letterSrc">Happy Gf Day, my girl. ❤️
+Instead of just posting you on my story, I wanted to make something special for you.
+
+You are one of the most beautiful parts of my life, and I hope you always remember how special you are to me.
+
+This little website is just for you.
+
+My girl, my girl. ❤️</template>
+  </section>
+
+  <!-- FINAL SURPRISE -->
+  <section id="finale" class="sec finale">
+    <p class="f1 script">And if I could choose again…</p>
+    <p class="f2 script">I would still choose you. ❤️</p>
+    <p class="f3">Happy Gf Day, My Girl 🌸</p>
+    <button id="replay" class="replay">Watch again</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
